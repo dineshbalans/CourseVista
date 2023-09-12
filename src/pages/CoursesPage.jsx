@@ -9,6 +9,7 @@ import Pagination from "../components/UI/Pagination";
 let flag = true;
 
 const CoursesPage = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
   const courseDetails = useSelector((state) => state.course.courseDetails);
 
@@ -43,7 +44,9 @@ const CoursesPage = () => {
         }
         const data = await response.json();
         dispatch(courseActions.addCourses(transformData(data)));
+        setIsLoading(false);
       };
+      setIsLoading(true);
       getCourses();
     }
   }, []);
@@ -57,6 +60,15 @@ const CoursesPage = () => {
           tellus, luctus nec ullamcorper mattis.
         </p>
       </div>
+      {/* Loading Animation */}
+      {isLoading && (
+        <div className="flex justify-center gap-3">
+          <div className="w-8 h-8 border-4 rounded-full border-b-[#076FB3] animate-twSpin animate-infinite" />
+          <span className="my-auto text-2xl font-bold text-gray-500/100 animate-twPulse animate-infinite">
+            Loading...
+          </span>
+        </div>
+      )}
       <div className="flex flex-wrap justify-center gap-5 md:gap-3 p-10 xl:mx-9 -mb-24">
         {currentData.map((course) => (
           <CourseList

@@ -76,13 +76,15 @@ const CourseDetailsPage = () => {
               <div className=" bg-[#FAFAFA] text-[#2F3F50] p-4 space-y-5 px-5">
                 <div className="flex">
                   <img
-                    src={instructor}
+                    src={courseDetails.instructor.image.large}
                     alt=""
                     className="w-[86px] h-24 rounded-lg"
                   />
                   <div className="text-center m-auto md:text-lg lg:text-xl font-lato tracking-wider">
-                    <h3 className="font-bold">Chris Parker</h3>
-                    <h3>Professional Marketer</h3>
+                    <h3 className="font-bold">
+                      {courseDetails.instructor.name}
+                    </h3>
+                    <h3>{courseDetails.instructor.job}</h3>
                   </div>
                 </div>
                 <p className="leading-7 w-[93%]">
@@ -97,10 +99,11 @@ const CourseDetailsPage = () => {
                 <h1 className="text-xl font-bold font-lato tracking-wider">
                   Course Description
                 </h1>
-                <h3 className="leading-relaxed">
-                {courseDetails.headline}
-                </h3>
-                <button className="bg-[#076FB3] lg:w-1/2 p-2 rounded-full text-white px-5">
+                <h3 className="leading-relaxed">{courseDetails.headline}</h3>
+                <button
+                  className="bg-[#076FB3] lg:w-1/2 p-2 rounded-full text-white px-5 hover:bg-[#076FB3]/80"
+                  onClick={() => alert("Please Login to Continue")}
+                >
                   Take this Course
                 </button>
               </div>
@@ -169,8 +172,27 @@ const CourseDetailsPage = () => {
         </div>
       </section>
       <section className="max-sm:pt-96 mt-96 mb-16">
-        <div className="max-sm:pt-48 text-gray-700 w-[90%] lg:w-[80%] xl:w-[70%] mx-auto space-y-20">
+        <div className="max-sm:pt-48 text-gray-700 w-[90%] lg:w-[80%] xl:w-[70%] mx-auto space-y-8">
           <h1 className="text-center text-4xl font-bold">Course Details</h1>
+          <div className="text-center text-red-500 flex flex-wrap justify-center space-x-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 fill-red-200"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z"
+              />
+            </svg>
+            <span className="max-sm:w-full">
+              OOPS! , You are not yet enrolled in this course
+            </span>
+          </div>
           <div className="flex flex-wrap bg-white max-sm:space-y-6 rounded-lg shadow-xl p-5">
             <div className="w-full md:w-1/3 text-center max-sm:pb-5 max-sm:border-b md:border-r space-y-2">
               <svg
@@ -206,7 +228,11 @@ const CourseDetailsPage = () => {
                 />
               </svg>
               <h1 className="font-semibold">Course Price</h1>
-              <h1>{courseDetails.is_paid ? `$ ${courseDetails.price}` : courseDetails.price}</h1>
+              <h1>
+                {courseDetails.is_paid
+                  ? `$ ${courseDetails.price}`
+                  : courseDetails.price}
+              </h1>
             </div>
             <div className="w-full md:w-1/3 text-center space-y-2">
               <svg
@@ -223,7 +249,7 @@ const CourseDetailsPage = () => {
                   d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
                 />
               </svg>
-              <h1 className="font-semibold">Course Duration</h1>
+              <h1 className="font-semibold">Course Level</h1>
               <h1>Beginner</h1>
             </div>
           </div>
@@ -245,7 +271,9 @@ const CourseDetailsPage = () => {
                 mollit anim id est laborum.
               </p>
               <div className="flex max-sm:justify-center">
-                <button className="bg-[#0571BA] p-2 w-1/2 rounded-full text-white">
+                <button className="bg-[#0571BA] p-2 w-1/2 rounded-full text-white hover:bg-[#0571BA]/80"
+                  onClick={() => alert("Please Login to Continue")}
+                  >
                   Take This Course
                 </button>
               </div>
@@ -280,12 +308,14 @@ const CourseDetailsPage = () => {
           </div>
         </div>
       </section>
-      <section className="w-[80%] mx-auto px-16">
+      <section className="w-[95%] lg:w-[85%] xl:w-[80%] mx-auto xl:px-16">
         {/* Course Content Section */}
-        <div className="flex p-4">
-          <h1 className="my-auto font-bold text-xl">Course Content</h1>
+        <div className="flex flex-wrap p-4 justify-center max-sm:space-y-3">
+          <h1 className="my-auto font-bold text-2xl md:text-xl">
+            Course Content
+          </h1>
           <button
-            className="bg-[#0984E3] text-white px-3 py-[6px] rounded-full ml-auto flex gap-2 "
+            className="bg-[#0984E3] text-white px-3 py-[6px] rounded-full ml-auto flex gap-2 max-sm:w-[90%] max-sm:mx-auto"
             onClick={primaryButtonHandler}
           >
             {primaryBttnVisibility ? (
@@ -319,13 +349,15 @@ const CourseDetailsPage = () => {
                 />
               </svg>
             )}
-            {primaryBttnVisibility ? "Collapse All" : "Expand All"}
+            <span className="flex justify-center max-sm:w-full">
+              {primaryBttnVisibility ? "Collapse All" : "Expand All"}
+            </span>
           </button>
         </div>
         <div className="space-y-3">
           <div className="border-2 rounded-lg mx-5">
-            <div className="flex p-4">
-              <div className="w-7 h-7 border-4 rounded-full mx-5 my-auto" />
+            <div className="flex p-3 md:p-4">
+              <div className="w-7 h-7 border-4 rounded-full mx-3 md:mx-5 my-auto" />
               <div className="space-y-1">
                 <h3 className="text-lg">Developing Stratagy</h3>
                 <h5 className="text-sm font-semibold">3 Topics</h5>
@@ -401,8 +433,8 @@ const CourseDetailsPage = () => {
             </div>
             {content1Visibility && (
               <div>
-                <div className="flex flex-wrap bg-[#0984E3] p-6 px-16 text-white">
-                  <div className="flex w-1/2 space-x-3">
+                <div className="flex flex-wrap bg-[#0984E3] p-6 px-16 text-white max-sm:space-y-2">
+                  <div className="flex w-full md:w-1/2 space-x-3 max-sm:justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -421,7 +453,7 @@ const CourseDetailsPage = () => {
                       Lesson Content
                     </span>
                   </div>
-                  <div className="space-x-3 w-1/2 flex justify-end">
+                  <div className="space-x-3 w-full md:w-1/2 flex justify-end max-sm:justify-center">
                     <span className="px-3 border-r text-sm font-bold my-auto">
                       0% COMPLETE
                     </span>
@@ -435,8 +467,8 @@ const CourseDetailsPage = () => {
             )}
           </div>
           <div className="border-2 rounded-lg mx-5">
-            <div className="flex p-4">
-              <div className="w-7 h-7 border-4 rounded-full mx-5 my-auto" />
+            <div className="flex p-3 md:p-4">
+              <div className="w-7 h-7 border-4 rounded-full mx-3 md:mx-5 my-auto" />
               <div className="space-y-1">
                 <h3 className="text-lg">Monitarting & Digital Advertising</h3>
                 <h5 className="text-sm font-semibold">2 Topics</h5>
@@ -512,8 +544,8 @@ const CourseDetailsPage = () => {
             </div>
             {content2Visibility && (
               <div>
-                <div className="flex flex-wrap bg-[#0984E3] p-6 px-16 text-white">
-                  <div className="flex w-1/2 space-x-3">
+                <div className="flex flex-wrap bg-[#0984E3] p-6 px-16 text-white max-sm:space-y-2">
+                  <div className="flex w-full md:w-1/2 space-x-3 max-sm:justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -532,7 +564,7 @@ const CourseDetailsPage = () => {
                       Lesson Content
                     </span>
                   </div>
-                  <div className="space-x-3 w-1/2 flex justify-end">
+                  <div className="space-x-3 w-full md:w-1/2 flex justify-end max-sm:justify-center">
                     <span className="px-3 border-r text-sm font-bold my-auto">
                       0% COMPLETE
                     </span>
@@ -555,7 +587,7 @@ export default CourseDetailsPage;
 
 const LessonContent = ({ content }) => {
   return (
-    <div className="p-6 mx-[38px]  border-b flex space-x-3">
+    <div className="p-6 mx-6 md:mx-[38px]  border-b flex space-x-3">
       <div className="w-7 h-7 border-4 rounded-full my-auto" />
       <h5>{content}</h5>
     </div>

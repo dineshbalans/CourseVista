@@ -10,7 +10,7 @@ const CourseList = (props) => {
   return (
     <div class="md:w-[31%] lg:w-[31.5%] xl:w-[29%] bg-white space-y-1 m-1 xl:m-5 flex flex-col border pb-3 rounded-md hover:shadow-2xl hover:scale-110 duration-300">
       <img src={courseIcon} alt="" className="rounded" />
-      <h2 className="p-2  font-bold text-xl">{courseTitle}</h2>
+      <h2 className="p-4 font-bold text-xl">{courseTitle}</h2>
       <div className="px-3 pb-2 flex-1">{courseDescription}</div>
       <button
         className="bg-blue-600 text-white rounded py-1 w-[93%] mx-auto"
