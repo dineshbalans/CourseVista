@@ -22,7 +22,7 @@ const CoursesPage = () => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentData = courseDetails.slice(startIndex, endIndex);
-
+ 
   useEffect(() => {
     if (flag) {
       flag = false;
