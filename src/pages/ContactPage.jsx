@@ -21,7 +21,7 @@ const ContactPage = () => {
 
   return (
     <div className="bg-[#FAFAFA] text-[#2F3F50]">
-      <div className="text-center bg-[#076FB3] text-white space-y-10 py-12 pb-36 mb-12 max-sm:pt-24">
+      <div className="text-center bg-[#076FB3] text-white space-y-10 py-12 pb-36 mb-12 max-sm:pt-48">
         <h2 className="text-5xl font-bold">Need Help?</h2>
         <p className="w-[85%] md:w-[70%] lg:w-1/2 mx-auto text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit

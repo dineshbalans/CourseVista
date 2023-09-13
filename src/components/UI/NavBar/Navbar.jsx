@@ -3,7 +3,7 @@ import childLogo from "../../../assets/logo-bg-blue.png";
 import parentLogo from "../../../assets/logo.png";
 import MenuBar from "./MenuBar";
 import { useDispatch, useSelector } from "react-redux";
-import { menuBarActions } from "../../../store/menuBarSlice";
+import { uiActions } from "../../../store/uiSlice";
 
 const Navbar = ({ style }) => {
   const navStyle =
@@ -16,8 +16,8 @@ const Navbar = ({ style }) => {
   return (
     <>
       <section className={navStyle}>
-        <div className="w-[95%] xl:w-[85%] mx-auto my-2 ">
-          <div className="flex ">
+        <div className="w-[95%] xl:w-[85%] mx-auto my-2 overflow-x-hidden">
+          <div className="flex justify-between">
             <div className="w-1/2 animate-fadeInLeft ">
               <img
                 src={courseVistaLogo}
@@ -26,11 +26,12 @@ const Navbar = ({ style }) => {
               />
             </div>
 
-            <div className="flex w-1/2 my-auto animate-fadeInRight">
+            <div className="flex w-1/2 my-auto animate-fadeInRight ">
               {!menuIsVisible && (
+                <>
                 <button
                   className="ml-auto lg:hidden mx-5 animate-fadeInRight"
-                  onClick={() => dispatch(menuBarActions.toggle())}
+                  onClick={() => dispatch(uiActions.toggle())}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +48,7 @@ const Navbar = ({ style }) => {
                     />
                   </svg>
                 </button>
+                </>
               )}
               <div className="hidden lg:flex space-x-7 text-white text-md font-semibold ml-auto">
                 <NavLink

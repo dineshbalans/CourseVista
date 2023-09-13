@@ -3,11 +3,11 @@ const PartnersSection = () => {
     <section className="mt-5  text-[#2F3F50]">
       <div className="container p-2 mx-auto">
         <div className="flex flex-wrap mx-5 justify-center">
-          <h2 className=" text-3xl xl:text-2xl font-bold p-12 xl:w-[25%] xl:border-r">
+          <h2 className="text-2xl max-sm:scale-125 md:text-3xl xl:text-2xl font-bold p-12 xl:w-[25%] xl:border-r">
             Industry Partners
           </h2>
           <div className="flex flex-wrap gap-16 md:gap-6 lg:gap-8 xl:gap-9 xl:w-[75%] xl:pl-10 items-center justify-center">
-            <div className="w-full max-sm:scale-125 flex justify-center md:w-1/4 lg:w-1/6 ">
+            <div className="w-1/2 max-sm:scale-125 flex justify-center md:w-1/4 lg:w-1/6 ">
               <svg
                 id="logo-9"
                 width="152"
@@ -24,7 +24,7 @@ const PartnersSection = () => {
                 ></path>{" "}
               </svg>
             </div>
-            <div className="w-full max-sm:scale-125 flex justify-center md:w-1/4 lg:w-1/6 ">
+             <div className="w-1/2 max-sm:scale-125 flex justify-center md:w-1/4 lg:w-1/6 ">
               <svg
                 id="logo-6"
                 width="134"
@@ -96,7 +96,7 @@ const PartnersSection = () => {
                 ></path>{" "}
               </svg>
             </div>
-            <div className="w-full max-sm:scale-125 flex justify-center md:w-1/4 lg:w-1/6 ">
+            <div className="w-1/2 max-sm:scale-125 flex justify-center md:w-1/4 lg:w-1/6 ">
               <svg
                 id="logo-8"
                 width="140"
@@ -173,7 +173,7 @@ const PartnersSection = () => {
                 ></path>{" "}
               </svg>
             </div>
-            <div className="w-full max-sm:scale-125 flex justify-center md:w-1/4 lg:w-1/6 ">
+            <div className="w-1/2 max-sm:scale-125 flex justify-center md:w-1/4 lg:w-1/6 ">
               <svg
                 id="logo-5"
                 width="132"
@@ -195,7 +195,7 @@ const PartnersSection = () => {
                 ></path>{" "}
               </svg>
             </div>
-            <div className="w-full max-sm:scale-125 flex justify-center md:w-1/4 lg:w-1/6 ">
+            <div className="w-1/2 max-sm:scale-125 flex justify-center md:w-1/4 lg:w-1/6 ">
               <svg
                 id="logo-2"
                 width="132"

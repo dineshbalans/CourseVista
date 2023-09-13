@@ -23,7 +23,7 @@ const HeroSection = () => {
         <div className="w-full animate-fadeIn animate-delay-300">
           <Navbar style="parent" />
           <div className="w-[90%] lg:w-[70%] xl:w-[60%] flex flex-col mx-auto mb-6">
-            <h1 className="text-white text-2xl md:text-5xl font-bold mt-48 md:mt-32 text-center">
+            <h1 className="text-white text-2xl md:text-5xl font-bold mt-52 lg:mt-32 text-center">
               Learn from Industry Experts
             </h1>
             <h3 className="text-white text-base md:text-lg m-10 text-center leading-7">

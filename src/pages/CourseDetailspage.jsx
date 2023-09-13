@@ -171,7 +171,7 @@ const CourseDetailsPage = () => {
           </div>
         </div>
       </section>
-      <section className="max-sm:pt-96 mt-96 mb-16">
+      <section className="max-sm:pt-96 max-sm:mt-[125%] mt-96 mb-16">
         <div className="max-sm:pt-48 text-gray-700 w-[90%] lg:w-[80%] xl:w-[70%] mx-auto space-y-8">
           <h1 className="text-center text-4xl font-bold">Course Details</h1>
           <div className="text-center text-red-500 flex flex-wrap justify-center space-x-5">

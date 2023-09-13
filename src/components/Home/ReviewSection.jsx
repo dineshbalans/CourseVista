@@ -8,7 +8,7 @@ const ReviewSection = ({head = 'What Our Students Have to Say'}) => {
     <>
       <section className="mt-40 text-[#2F3F50] bg-[#FAFAFA] mb-20 xl:mx-16">
         <div className="space-y-10">
-          <h1 className="text-center text-2xl md:text-4xl font-bold">
+          <h1 className="text-center text-2xl md:text-4xl font-bold px-2">
             {head}
           </h1>
           <div className="flex flex-wrap md:mx-10 px-2">

@@ -6,7 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import ChildLayout from "./pages/ChildLayout.jsx";
 import HomePage from "./pages/HomePage";
-import CoursesPage from "./pages/CoursesPage";
+import CoursesPage, { loader as contactPageLoader } from "./pages/CoursesPage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import ErrorPage from "./pages/Error/ErrorPage";
@@ -21,6 +21,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <HomePage />,
     errorElement: <ErrorPage />,
+    loader: contactPageLoader,
   },
   {
     path: "/coursevista",
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   // <React.StrictMode>
   // </React.StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
 );

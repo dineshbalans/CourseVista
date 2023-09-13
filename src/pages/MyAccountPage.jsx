@@ -5,7 +5,7 @@ const MyAccountPage = () => {
   return (
     <>
       <div className="bg-[#FAFAFA]">
-        <div className="text-center bg-[#076FB3] text-white space-y-10 py-12 pb-36 max-sm:pt-20">
+        <div className="text-center bg-[#076FB3] text-white space-y-10 py-12 pb-36 max-sm:pt-48">
           <h2 className="text-5xl font-bold"> My Account</h2>
           <p className="w-1/2 mx-auto text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit

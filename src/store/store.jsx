@@ -1,10 +1,10 @@
 import { configureStore} from "@reduxjs/toolkit";
 
-import menuBarSliceReducer from "./menuBarSlice";
+import uiSliceReducer from "./uiSlice";
 import courseSliceReducer from "./courseSlice";
 
 const store = configureStore({
-    reducer : { ui : menuBarSliceReducer, course : courseSliceReducer}
+    reducer : { ui : uiSliceReducer, course : courseSliceReducer}
 })
 
 export default store;

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const menuBarSlice = createSlice({
-  name: "menubar",
+const uiSlice = createSlice({
+  name: "ui",
   initialState: { menuVisibility: false },
   reducers: {
     toggle(state) {
@@ -10,6 +10,6 @@ const menuBarSlice = createSlice({
   },
 });
 
-export const menuBarActions = menuBarSlice.actions;
+export const uiActions = uiSlice.actions;
 
-export default menuBarSlice.reducer;
+export default uiSlice.reducer;

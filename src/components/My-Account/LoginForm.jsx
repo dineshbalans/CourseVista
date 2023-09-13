@@ -21,11 +21,11 @@ const LoginForm = () => {
           </p>
           <form class="mt-6" action="#" method="POST">
             <div>
-              <label class="block text-gray-700">Email Address</label>
+              <label class="block text-gray-700" htmlFor="email">Email Address</label>
               <input
                 type="email"
-                name=""
-                id=""
+                name="email"
+                id="email"
                 placeholder="Enter Email Address"
                 class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
                 autofocus
@@ -35,11 +35,11 @@ const LoginForm = () => {
             </div>
 
             <div class="mt-4">
-              <label class="block text-gray-700">Password</label>
+              <label class="block text-gray-700" htmlFor="pswd">Password</label>
               <input
                 type="password"
-                name=""
-                id=""
+                name="pswd"
+                id="pswd"
                 placeholder="Enter Password"
                 minlength="6"
                 class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
